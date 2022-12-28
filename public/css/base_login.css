@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+  width: 100%;
+}
+#login_recipe{
+  padding: 50px 200px;
+}
+.login_form{
+  border: solid 1px #D3D3D3;
+  margin: 0 100px;
+  padding: 30px 0;
+}
+.login_title{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.login_title h1{
+  font-weight: bold;
+  font-size: 20px;
+}
+.login_txt{
+  display: flex;
+  justify-content: center;
+}
+.login_txt div{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.login_email{
+}
+.login_email input{
+  height: 45px;
+  width: 500px;
+  border: solid 2px #DCDCDC;
+  border-radius: 5px;
+}
+.login_pass{
+	
+}
+.login_pass input{
+  height: 45px;
+  width: 500px;
+  border: solid 2px #DCDCDC;
+  border-radius: 5px;
+}
+.error_list{
+	color: red;
+}

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+  width: 100%;
+}
+#pass{
+  padding: 0 200px;
+}
+.pass_reset{
+  border: solid  #afafb0;
+  border-radius: 10px;
+  padding: 100px 0;
+  margin: 100px 0;
+}
+.pass_reset_title{
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.pass_reset_title p{
+  font-weight:bold;
+  font-size: 20px;
+  color: #626063;
+}
+.pass_reset_form{
+  width: 500px;
+  margin: 0 auto;
+}
+#email{
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 2px #DCDCDC;
+}
+.pass_button{
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+#pass_edit{
+  padding: 0 200px;
+}
+.pass_edit{
+  border: solid  #afafb0;
+  border-radius: 10px;
+  padding: 100px 0;
+  margin: 100px 0;
+}
+.pass_edit_title{
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.pass_edit_title h1{
+  font-weight:bold;
+  font-size: 20px;
+  color: #626063;
+}
+.pass_edit_title h2{
+  font-weight:bold;
+  font-size: 20px;
+  color: #626063;
+  border-bottom: solid 1px #DCDCDC;
+}
+.edit_form{
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.input-group1{
+  padding: 15px 0;
+}
+.input-group2{
+  padding: 15px 0;
+}
+.input-group1 input{
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 2px #DCDCDC;
+}
+.input-group2 input{
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 2px #DCDCDC;
+}
+.pass_edit_button{
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+.pass_edit_button button{
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+}

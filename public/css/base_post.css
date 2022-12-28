@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+  width: 100%;
+}
+#post_form{
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+.post_form{
+  border: solid 1px #D3D3D3;
+  padding: 30px 200px;
+}
+.post_title{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.post_title h1{
+  font-weight: bold;
+  font-size: 20px;
+}
+.recipe_name{
+  display: flex;
+  justify-content: center;
+}
+.recipe_name input{
+  height: 45px;
+  width: 500px;
+  border: solid 2px #DCDCDC;
+  border-radius: 5px;
+}
+.recipe_post_img{
+	padding: 25px 0;
+}
+.img_text{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.img_file{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.recipe_material{
+	padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.title{
+	display: flex;
+	justify-content: space-evenly
+}
+.material_name{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.material_name input{
+  margin: 10px 0;
+  height: 30px;
+  border: solid 2px #DCDCDC;
+  border-radius: 5px;
+}
+.material_quantity{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.material_quantity input{
+  margin: 10px 0;
+  height: 30px;
+  border: solid 2px #DCDCDC;
+  border-radius: 5px;
+}
+.recipe_genre{
+	padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.recipe_genre select{
+	width: 200px;
+	height: 30px;
+}
+.process_box{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.process_box textarea{
+  width: 800px;
+  height: 400px;
+  border: solid 2px #DCDCDC;
+  border-radius: 5px;
+}
+.recipe_btn{
+	padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.recipe_btn input{
+	width: 300px;
+	height: 50px;
+	background-color: #fff352;
+	font-size: 20px;
+	border-radius: 9px;
+}
+.preview_img{
+	display: flex;
+  justify-content: center;
+}
+#preview{
+	width: 500px;
+	height: 250px;
+	border-radius: 8px;
+}
+.error_list{
+	display: flex;
+	justify-content: center;
+	color: red;
+}
+.material{
+}

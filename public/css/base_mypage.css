@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+  width: 100%;
+}
+#mypage_title{
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+	background-color: #f7f5f4;
+}
+.mypage_title{
+  margin: 0 10%;
+}
+.mypage_title h1{
+  font-size: 25px;
+  font-weight: bold;
+}
+#post_items{
+	padding: 50px 40px;
+	margin-bottom: 200px;
+	background-color: #f7f5f4;
+}
+.recipe_posted{
+	display: flex;
+	flex-wrap: wrap;
+	row-gap:20px;
+}
+.items{
+	width: 230px;
+  background-color: white;
+  margin: 0 1%;
+  padding: 1% 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .5);
+}
+.recipe_category{
+	padding-top: 5px;
+  padding-bottom: 15px;
+}
+.recipe_img img{
+  width: 100%;
+}
+#my_goods{
+  display: flex;
+  justify-content: center;
+	padding: 100px 0;
+	border-top: 1px dashed #c3cad9;
+	background-color: #f7f5f4;
+}
+.good_title h2{
+  font-weight: bold;
+  font-size: 25px;
+}
+#recipes_my_goods{
+	padding: 50px 40px;
+	margin-bottom: 400px;
+	background-color: #f7f5f4;
+	border-bottom: 1px dashed #c3cad9;
+
+}
+.recipes_goods{
+	display: flex;
+	flex-wrap: wrap;
+	row-gap:20px;
+}
+.recipe_img img{
+  width: 100%;
+}
+.liked {
+  color: pink;
+}
+#user{
+	width: 100%;
+	padding:0 50px;
+	margin: 100px 0;
+}
+.user_title{
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+.user_title h1{
+	font-size: 25px;
+	font-weight: bold;
+}
+.user_text{
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+.user_text input{
+	width: 400px;
+	height: 40px;
+	border-radius: 10px;
+}
+.user_search{
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+.user_result{
+	padding: 30px 0;
+	display: flex;
+	justify-content: center;
+}
+.user_result table, td, th {
+	border: 2px #808080 solid;
+}
+.user_result td{
+	padding: 5px 10px;
+}
+#recipe{
+	padding:0 200px;
+}
+.recipe_title{
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+.recipe_title h1{
+	font-size: 25px;
+	font-weight: bold;
+}
+.recipe_text{
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+.recipe_text input{
+	width: 400px;
+	height: 40px;
+	border-radius: 10px;
+}
+.recipe_search{
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+.recipe_result{
+	padding: 10px 200px;
+}
+.recipe_result table, td, th {
+	border: 2px #808080 solid;
+}
+.recipe_result table{
+	width: 100%;
+	margin-bottom: 10px;
+	border-collapse: separate;
+  border-spacing: 8px 0px;
+}
+.recipe_result td{
+	padding: 5px 0;
+}
