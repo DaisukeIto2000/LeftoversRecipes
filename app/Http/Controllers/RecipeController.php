@@ -166,7 +166,6 @@ class RecipeController extends Controller
         $text_2 = $request->text_2;
         $image = $request->file('recipe_file')->store('public/image');
         $image = str_replace('public/image/', '', $image);
-        var_dump($image);
 
         $recipe = Recipe::create([
           'user_id' => $request->user_id,
