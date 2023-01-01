@@ -42,8 +42,29 @@ body{
 #complete{
   margin: 20px 0;
   padding: 0 50px;
+
 }
 .complete_item{
+  padding: 20px;
+  margin: 0 200px;
+  border: 1px solid  #afafb0;
+  border-radius: 10px;
+}
+.title{
+  padding: 25px 0;
   display: flex;
   justify-content: center;
+}
+.title h1{
+  font-weight: bold;
+  font-size: 25px;
+}
+.complete{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 17px;
+}
+.display_none{
+  display: none;
 }

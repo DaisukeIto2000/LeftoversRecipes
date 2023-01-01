@@ -53,7 +53,7 @@
           <h2>作り方</h2>
         </div>
         <div class="process_1">
-          <p>{{ $post_item->process }}</p>
+          <p>{!! nl2br(e($post_item->process)) !!}</p>
         </div>
       </div>
     </section>

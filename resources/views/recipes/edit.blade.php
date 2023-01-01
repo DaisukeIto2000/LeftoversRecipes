@@ -3,7 +3,6 @@ session_start();
 if(!empty($_POST['recipe_id'])){
   $_SESSION['id'] = $_POST['recipe_id'];
 }
-var_dump($_SESSION['id']);
 ?>
 @foreach($post_items as $post_item)
 @endforeach
@@ -55,10 +54,12 @@ var_dump($_SESSION['id']);
               </tr>
             </thead>
             <tbody class="material_name">
+              @foreach($post_items as $post_item)
               <tr>
-                <td><input type="text" name="text_1[]" class="text"></td>
-                <td><input type="text" name="text_2[]" class="text"></td>
+                <td><input type="text" name="text_1[]" class="text" value="{{$post_item->name}}"></td>
+                <td><input type="text" name="text_2[]" class="text" value="{{$post_item->qty}}"></td>
               </tr>
+              @endforeach
             </tbody>
             <tfoot>
               <tr class="title">

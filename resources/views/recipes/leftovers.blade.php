@@ -1,4 +1,9 @@
 <?php
+if(!empty($_GET['order_list'])){
+  for($i = 0; $i<count($_GET['order_list']); $i++){
+  $_SESSION['order_list'][$i] = $_GET['order_list'][$i];
+  }
+}
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +32,11 @@
           <p>材料名</p>
         </div>
         <ol id="order_list">
-          <li><input type="text" class="text_order_list" name="order_list[]" placeholder="材料入力" value=""></li>
+        @if(!empty($keyword))
+          @foreach ($keyword as $value)
+          <li><input type="text" class="text_order_list" name="order_list[]" placeholder="材料入力" value="{{$value}}"></li>
+          @endforeach
+        @endif
         </ol>
         <li class="add"><input id="btn_add" type="button" value="行を追加"><li>
       </li>

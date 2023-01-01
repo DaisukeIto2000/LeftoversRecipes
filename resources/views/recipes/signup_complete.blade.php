@@ -1,12 +1,11 @@
 <?php
-var_dump($_POST);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <title>recipes_top</title>
-<link rel="stylesheet" type="text/css" href="{{ asset('') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/base_complete.css') }}">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="jquery-bgswitcher-master/jquery.bgswitcher.js"></script>
 </head>
@@ -15,17 +14,17 @@ var_dump($_POST);
     @include('recipes.header_sign')
   </header>
   <main>
-    <section>
-      <div class="">
-        <h1>登録完了</h1>
-      </div>
-      <div class="">
-        <p>新規登録が完了しました。</p>
-      </div>
-    </section>
-    <section>
-      <div class="">
-        <a href="{{ route('login_page')}}">ログインページへ</a>
+    <section id="complete">
+      <div class="complete_item">
+        <div class="title">
+          <h1>登録完了</h1>
+        </div>
+        <div class="complete">
+          <p>新規登録が完了しました。</p>
+        </div>
+        <div class="complete">
+          <a href="{{ route('login_page')}}">ログインページへ</a>
+        </div>
       </div>
     </section>
   </main>

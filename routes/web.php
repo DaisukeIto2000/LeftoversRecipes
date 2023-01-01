@@ -32,6 +32,7 @@ Route::get('/logout',[RecipeController::class, 'getLogout'])->name('logout');
 Route::group(['middleware' => 'auth'], function () {
   Route::get('/my', [RecipeController::class, 'mypage'])->name('mypage');
   Route::post('/my', [RecipeController::class, 'mypage'])->name('mypage');
+  Route::post('/recipe_del/{id}', [RecipeController::class, 'destroy_1'])->name('recipe_destroy_1'); // 削除
 });
 Route::get('/detail', [RecipeController::class, 'detail']);
 Route::post('/detail', [RecipeController::class, 'detail']);

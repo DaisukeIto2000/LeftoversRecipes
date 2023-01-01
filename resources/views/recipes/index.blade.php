@@ -7,8 +7,23 @@
 <meta charset="utf-8">
 <title>recipes_top</title>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/base_index.css') }}">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="jquery-bgswitcher-master/jquery.bgswitcher.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var setImg = '#photo';
+    var fadeSpeed = 1600;
+    var switchDelay = 5000;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+</script>
 </head>
 <body>
   <header>
@@ -17,7 +32,11 @@
   <main>
     <section id="good_image">
       <div class="img_1">
-        <img src="{{ asset('image/24718875_m.jpg') }}">
+        <div id="photo">
+          <img class="img" src="{{ asset('image/24718875_m.jpg') }}" alt="">
+          <img class="img" src="{{ asset('image/25528664_s.jpg') }}" alt="">
+          <img class="img" src="{{ asset('image/25475339_s.jpg') }}" alt="">
+        </div>
       </div>
     </section>
     <section id="search">

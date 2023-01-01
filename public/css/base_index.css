@@ -43,6 +43,19 @@ body{
 #good_image{
   width: 100%;
 }
+#photo{
+	width: 100%;
+  height: 700px;
+  margin: 0 auto;
+	text-align: left;
+	overflow: hidden;
+  position: relative;
+}
+#photo img {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
 .img_1{
   margin: 0 10%;
 }

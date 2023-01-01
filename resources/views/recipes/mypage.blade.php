@@ -4,12 +4,12 @@ session_start();
 $_SESSION['user_id'] = $user_id;
 
 ?>
-<tr>
+
 @foreach($recipe_items as $recipe_item)
 @endforeach
 @foreach($likes_items as $like_item)
 @endforeach
-</tr>
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -54,6 +54,10 @@ $_SESSION['user_id'] = $user_id;
                 {{csrf_field()}}
                 <input type="hidden" name="recipe_id" value="{{ $recipe_item->id }}">
                 <button type="submit">編集</button>
+              </form>
+              <form action="{{ route('recipe_destroy_1', ['id'=>$recipe_item->id]) }}" method="POST">
+                {{ csrf_field() }}
+                <input type="submit" class="btn btn-danger btn-dell" value="削除">
               </form>
             </div>
           </div>
@@ -116,6 +120,17 @@ $_SESSION['user_id'] = $user_id;
 <script type="text/javascript">
   $("").on("click", function() {
     location.href= "login";
+  });
+
+  $(function (){
+      $(".btn-dell").click(function(){
+          if(confirm("本当に削除しますか？")){
+              // そのままsubmit処理を実行（※削除）
+          }else{
+              // キャンセル
+              return false;
+          }
+      });
   });
 
 </script>

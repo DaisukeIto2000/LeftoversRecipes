@@ -78,7 +78,7 @@ class RecipeController extends Controller
     public function userLogin(Request $request)
     {
       $credentials = $request->validate([
-        'email'=>['required'],
+        'email'=>['required','email'],
         'password'=>['required'],
       ],
       [
@@ -181,7 +181,7 @@ class RecipeController extends Controller
               'qty' => $request->text_2[$i]
             ]);
           }
-        return view('recipes.complete', compact('recipe_name','process'));
+        return view('recipes.complete', compact('recipe_name','process', 'text_1', 'text_2'));
     }
 
     public function edit(Request $request){
@@ -213,6 +213,10 @@ class RecipeController extends Controller
 
         $image = $request->file('recipe_file')->store('public/image');
         $image = str_replace('public/image/', '', $image);
+        $recipe_name = $request->recipe_name;
+        $process = $request->process;
+        $text_1 = $request->text_1;
+        $text_2 = $request->text_2;
         $text_1 = $request->text_1;
         $text_2 = $request->text_2;
         $updateRecipe = $up_recipe->updateRecipe($request, $up_recipe, $image);
@@ -226,7 +230,7 @@ class RecipeController extends Controller
         }
         //$updateMaterial = $up_material->upMaterial($request, $up_material, $text_1, $text_2);
 
-        return view('recipes.edit_complete');
+        return view('recipes.edit_complete', compact('recipe_name','process', 'text_1', 'text_2'));
     }
 
     public function leftovers(Request $request)
@@ -343,8 +347,13 @@ class RecipeController extends Controller
     public function admin_login(Request $request)
     {
       $credentials = $request->validate([
-          'email' => ['required', 'email'],
+          'email' => ['required'],
           'password' => ['required'],
+      ],
+      [
+        'email.required' => '*メールアドレスを入力してください',
+        'password.required' => '*パスワードを入力してください',
+        'password.regex' => '*半角英数字最低１つずつ含めた8文字以上24文字以内で入力してください',
       ]);
 
       if (Auth::attempt($credentials, true)) {
@@ -382,7 +391,19 @@ class RecipeController extends Controller
     }
 
     /**
-     * 削除処理
+     * 削除処理(一般)
+     */
+    public function destroy_1($id)
+    {
+        // 指定されたIDのレコードを削除
+        $deleteMaterial = $this->material->deleteMaterialById($id);
+        $deleteRecipe = $this->recipe->deleteRecipeById($id);
+        // 削除したら一覧画面にリダイレクト
+        return redirect()->route('mypage');
+    }
+
+    /**
+     * 削除処理(admin)
      */
     public function destroy($id)
     {
