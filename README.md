@@ -1,15 +1,39 @@
-## Contributing
+## LeftoversRecipe(概要)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+料理レシピを投稿や検索できるアプリケーションです。
+ログインすると材料からレシピを検索できる、余り物レシピ検索を利用することができます。こちらは冷蔵庫などにある材料を入力することで該当するレシピを検索できます。
 
-## Code of Conduct
+## 使い方
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+非会員ユーザー　：
+  
+・レシピ閲覧・検索
+  
+会員ユーザー　：
 
-## Security Vulnerabilities
+・レシピ投稿、削除、編集、いいね、余り物検索
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+アカウント
+  
+    ・test1@gmail.com
+  
+    パスワード→testPass123
+  
+管理者ユーザー：
+  
+・ユーザーの削除、投稿レシピの編集、削除
+  
+   アカウント
+    
+     ・test2@gmail.com
+    
+     パスワード→Adminpass123
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 環境
+
+MAMP/MySQL/PHP
+
+## データベース
+
+お使いのphpMyAdminに上のデータベースを作り、入っているrecipe.sqlをインポートしていただければお使いいただけます。
