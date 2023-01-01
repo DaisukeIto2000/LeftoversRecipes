@@ -17,6 +17,7 @@
     @include('recipes.header_main')
   </header>
   <main>
+    
     <section>
       <div class="det_title">
         <div class="title">

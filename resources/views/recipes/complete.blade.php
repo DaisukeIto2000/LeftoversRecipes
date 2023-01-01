@@ -34,6 +34,7 @@ if(isset($_SESSION["process"]) == true){
 }else{
   $_SESSION["process"] = "";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
